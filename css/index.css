@@ -1,0 +1,516 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'YUniverse-B';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_yuniverse@1.0/YUniverse-B.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BookkMyungjo-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkMyungjo-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0 auto;
+}
+
+html { 
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'YUniverse-B';
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1)), url("../images/sample_gray.png");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#wrap {
+  max-width: 1200px;
+}
+
+/* 그리드 설계 */
+.grid-1 {
+  display: grid;
+  width: 90vw;
+  max-width: 900px;
+  margin: 2% auto;
+  z-index: 1;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 25px;
+  grid-template-areas:
+    "t        t       t"
+    "d23      d20     d12"
+    "d2       d14     d4"
+    "d5       d22     d16"
+    "d1       d7      d9"
+    "d10      d11     d18"
+    "d13      d3      d15"
+    "d6       d17     d8"
+    "d19      d24     d21";
+}
+
+@media only screen and (min-width: 500px) {
+
+  .grid-1 {
+    width: 100%;
+    /* 너비를 기준으로 높이를 계산 */
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "t     t     t     d1      d2      d3"
+      "t     t     t     d4      d5     d6"
+      "t     t     t     d7     d8      d9"
+      "d10    d11    d12   d13     d14     d15"
+      "d16   d17   d18   d19     d24      d24"
+      "d20    d21   d22   d23     d24     d24";
+  }
+}
+
+.grid-1>div {
+  width: 100%;
+}
+
+/* flex 속성 */
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-baseline {
+  align-items: baseline;
+}
+
+.title {
+  display: flex;
+  align-items: baseline;
+  justify-content:center;
+  grid-area: t;
+}
+
+.title .countdown {
+  font-size: 1.125rem;
+}
+
+.title h1 {
+  font-size: 4rem;
+  word-break: keep-all;
+}
+
+
+/* 그리드 별 배경 이미지 */
+.day-1 {
+  grid-area: d1;
+  background: url("../images/book01.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+}
+
+.day-2 {
+  grid-area: d2;
+  background: url("../images/book02.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+}
+
+.day-3 {
+  grid-area: d3;
+  background: url("../images/book03.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+}
+
+.day-4 {
+  grid-area: d4;
+  background: url("../images/book04.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+}
+
+.day-5 {
+  grid-area: d5;
+  background: url("../images/book05.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+}
+
+.day-6 {
+  grid-area: d6;
+  background: url("../images/book06.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-7 {
+  grid-area: d7;
+  background: url("../images/book07.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-8 {
+  grid-area: d8;
+  background: url("../images/book08.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-9 {
+  grid-area: d9;
+  background: url("../images/book09.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-10 {
+  grid-area: d10;
+  background: url("../images/book10.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+}
+
+.day-11 {
+  grid-area: d11;
+  background: url("../images/book11.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-12 {
+  grid-area: d12;
+  background: url("../images/book12.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+}
+
+
+.day-13 {
+  grid-area: d13;
+  background: url("../images/book13.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-14 {
+  grid-area: d14;
+  background: url("../images/book14.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-15 {
+  grid-area: d15;
+  background: url("../images/book15.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+}
+
+.day-16 {
+  grid-area: d16;
+  background: url("../images/book16.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+}
+
+.day-17 {
+  grid-area: d17;
+  background: url("../images/book17.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-18 {
+  grid-area: d18;
+  background: url("../images/book18.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-19 {
+  grid-area: d19;
+  background: url("../images/book19.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-20 {
+  grid-area: d20;
+  background: url("../images/book20.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-21 {
+  grid-area: d21;
+  background: url("../images/book21.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-22 {
+  grid-area: d22;
+  background: url("../images/book22.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-23 {
+  grid-area: d23;
+  background: url("../images/book23.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+.day-24 {
+  grid-area: d24;
+  background: url("../images/book24.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  border: 1px solid #333;
+
+}
+
+/* door styles */
+.grid-1 input {
+  display: none;
+}
+
+label {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  height: 120px;
+}
+
+/* 카드 앞면 */
+.door {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 300ms;
+  /* border-radius: 10px; */
+}
+
+.blind {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 30px;
+  height: 30px;
+  background-color: #eee;
+  border: 1px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blind:hover {
+  top: 8px;
+  left: 8px;
+}
+
+/* 카드 뒷면 */
+.door div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+
+  /* border-radius: 6px; */
+  font-size: 1.2em;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* 카드 뒤집기 애니메이션 */
+.door .back {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+}
+
+:checked+.door {
+  transform: rotateY(0deg);
+}
+
+
+/* 확대 및 회전 애니메이션 */
+@keyframes zoomAndRotate {
+  from {
+    transform: scale(0) rotateY(0deg);
+  }
+
+  to {
+    transform: scale(1) rotateY(360deg);
+  }
+}
+
+/* 애니메이션 적용 */
+.zoomIn {
+  animation: zoomAndRotate 0.5s ease forwards;
+}
+
+
+.hidden {
+  visibility: hidden;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  transform: translateY(-20%);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.modal-content p {
+  width: 340px;
+  height: 340px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #666;
+}
+
+.modal-content p {
+  font-family: 'BookkMyungjo-Bd';
+  line-height: 1.7;
+  width: 300px;
+  color: black;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  word-break: keep-all;
+}
+
+.modal-content p span {
+  font-family: 'BookkMyungjo-Bd';
+  line-height: 1.7;
+  padding: 0 20px;
+  color: #333;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 0.85rem;
+  word-break: keep-all;
+}
+
+/* 몇 일 남았다고 알리는 모달창 */
+#myModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #333;
+  background-color: white;
+  color: #333;
+  z-index: 9999;
+  width: 340px;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: 'BookkMyungjo-Bd';
+  font-size: 0.85rem;
+}
+
+/* 모달 닫기 버튼 스타일 */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
